@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/src/MyAnimatedContainer.dart';
 import 'package:flutter_tutorial/src/MyAnimatedOpacity.dart';
-import 'package:flutter_tutorial/src/MyDrawer.dart';
 import 'package:flutter_tutorial/src/MyFormValidation.dart';
+import 'package:flutter_tutorial/src/MyGetWidgetKit.dart';
 import 'package:flutter_tutorial/src/MyOrientation.dart';
-import 'package:flutter_tutorial/src/MySnackBar.dart';
 import 'package:flutter_tutorial/src/MySwipeToDismiss.dart';
-import 'package:flutter_tutorial/src/MyTabController.dart';
 import 'package:flutter_tutorial/src/mediaquery.dart';
 import 'package:flutter_tutorial/src/my_method_channel.dart';
 import 'package:flutter_tutorial/src/stream.dart';
@@ -60,6 +58,34 @@ class _HomeState extends State<Home> {
     return ListView(
       children: <Widget>[
         ListTile(
+          title: Text(
+            'Widget Component  > ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.red,
+            ),
+          ),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MyOrientation()));
+          },
+        ),
+        ListTile(
+          title: Text(
+            'GetWidget UI KIT  > ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.red,
+            ),
+          ),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MyGetWidgetKit()));
+          },
+        ),
+        ListTile(
           title: Text('AnimatedContainer'),
           onTap: () {
             Navigator.push(context,
@@ -71,40 +97,6 @@ class _HomeState extends State<Home> {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => MyAnimatedOpacity()));
-          },
-        ),
-        ListTile(
-          title: Text('Drawer'),
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MyDrawer()));
-          },
-        ),
-        ListTile(
-          title: Text('SnackBar'),
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MySnackBar()));
-          },
-        ),
-        ListTile(
-          title: Text(
-            'Widget Component  > ',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MyOrientation()));
-          },
-        ),
-        ListTile(
-          title: Text('TabController'),
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MyTabController()));
           },
         ),
         ListTile(

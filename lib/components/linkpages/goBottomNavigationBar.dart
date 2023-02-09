@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class goBottomNavigationBar extends StatelessWidget {
   const goBottomNavigationBar({super.key});
 
-  static const String _title = 'Flutter Code Sample';
+  static const String _title = 'Bottom Navigation';
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _goBottomNavigationStatefulWidget
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('Bottom Navigation'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
